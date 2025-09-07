@@ -1,0 +1,447 @@
+/** style.css - Ju-Jutsu Dojo **/
+/* Schriftarten laden und Farben definieren */
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter/Inter-Italic-VariableFont_opsz\,wght.ttf")
+    format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("fonts/Lobster/Lobster-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --bg-color: #1a1a1a;
+  --text: #fff;
+  --subtext: #ccc;
+  --design-color: #e24a12;
+  scroll-behavior: smooth;
+}
+
+/* 2. Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 3. Styles */
+body {
+  background-color: var(--bg-color);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: var(--text);
+}
+
+.nav {
+  height: 8vh;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  list-style: none;
+  gap: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  hyphens: auto; /* ggf. auf manual stellen */
+  transition: 0.3s ease-in-out;
+}
+
+.nav-list a:hover {
+  color: var(--design-color);
+  transition: 0.3s ease-in-out;
+}
+
+.hero {
+  height: 92vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("img/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 3rem;
+  line-height: 3rem;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: var(--design-color);
+  letter-spacing: 0.1rem;
+  display: block;
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: var(--design-color);
+  letter-spacing: 0.1rem;
+  display: block;
+  margin: 2rem 0rem 1rem 0rem;
+}
+
+.subtitle {
+  color: var(--subtext);
+  margin: 2rem 0;
+}
+
+.btn {
+  padding: 1rem;
+  background-color: var(--design-color);
+  border: 1px solid var(--design-color);
+  transition: 0.3s ease-in-out;
+  width: fit-content;
+}
+
+.btn-hero {
+  margin-top: 2rem;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: var(--design-color);
+  transition: 0.3s ease-in-out;
+}
+
+.btn-invert {
+  background-color: transparent;
+  color: var(--design-color);
+  border: 1px solid var(--design-color);
+  margin-left: 1rem;
+}
+
+.btn-invert:hover {
+  background-color: var(--design-color);
+  color: var(--text);
+  border-color: transparent;
+}
+
+.about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+.split-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+  max-width: 1200px;
+  font-size: 0.9rem;
+  margin: 5rem auto;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+  grid-row: 2;
+  image-rendering: inherit;
+  width: 100%;
+}
+
+.img1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.img2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.img3 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.img-grid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.split-p {
+  color: var(--subtext);
+  text-align: justify;
+}
+
+.btn-about {
+  margin: 2rem;
+}
+
+.btn-menu {
+  margin-top: 2rem;
+  align-self: flex-start;
+}
+
+.course {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("img/course-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+  flex-basis: 100%;
+}
+
+.course-p {
+  text-align: center;
+}
+
+.class-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+}
+
+.coach {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.coach-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+.img-coach-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.img-coach {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+  max-width: 1200px;
+  font-size: 0.9rem;
+  margin: 5rem auto;
+}
+
+.contact-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.address-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.address {
+  margin: 0 0 2rem 0;
+  align-items: center;
+  text-align: center;
+}
+
+.address-span {
+  padding: 0.5rem;
+  display: block;
+  text-align: left;
+}
+
+.btn-address {
+  align-items: center;
+  text-align: center;
+}
+
+.footer-container {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #303030;
+}
+
+.footer {
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: #303030;
+}
+
+@media (min-width: 600px) {
+  .nav-list {
+    gap: 4rem;
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .btn-address {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-list {
+    gap: 5rem;
+    font-size: 1.2rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    padding: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .split-section {
+    flex-direction: row;
+    width: 100%;
+    margin: 5rem auto;
+  }
+
+  .text-container {
+    flex-basis: 40%;
+  }
+
+  .img-container {
+    flex-basis: 60%;
+  }
+
+  .course-container {
+    flex-direction: row;
+  }
+
+  .contact {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 5rem auto;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-list {
+    gap: 6rem;
+    font-size: 1.3rem;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+}
